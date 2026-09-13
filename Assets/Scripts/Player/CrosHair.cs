@@ -30,6 +30,6 @@ public class CrosHair : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Debug.DrawRay(transform.position, transform.up * distance, Color.red);
+       // Debug.DrawRay(transform.position, transform.up * distance, Color.red);
     }
 }

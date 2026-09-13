@@ -400,7 +400,7 @@ Transform:
   m_GameObject: {fileID: 1162789507}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.73, y: 0, z: 0}
+  m_LocalPosition: {x: 11.97, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -604,7 +604,7 @@ Transform:
   m_GameObject: {fileID: 1774407708}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.8, y: 0, z: 0}
+  m_LocalPosition: {x: -11.97, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -668,6 +668,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 636861893803309178, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 1301211658858699583, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -679,6 +683,14 @@ PrefabInstance:
     - target: {fileID: 1452421436041500774, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
       propertyPath: layer.m_Bits
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2430341060314847839, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 3200493663369104312, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
+      propertyPath: m_Name
+      value: GunAnimation
       objectReference: {fileID: 0}
     - target: {fileID: 3200493663369104312, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
       propertyPath: m_Layer
@@ -771,6 +783,14 @@ PrefabInstance:
     - target: {fileID: 8613420470541616584, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627943692930347373, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 8627943692930347373, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
+      propertyPath: m_Size.y
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 8745796338803729166, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
       propertyPath: m_Name

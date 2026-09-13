@@ -24,31 +24,41 @@ public class DamagePlayerSystem : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        DamageValue++;
+        if (collision.collider.gameObject.CompareTag("Astroid") || collision.collider.gameObject.CompareTag("CrackedAstroid"))
+        {
+            DamageValue++;
 
-        Destroy(collision.collider.gameObject);
-        explode.transform.position = collision.GetContact(0).point;
-        Instantiate(explode);
+            Destroy(collision.collider.gameObject);
+            explode.transform.position = collision.GetContact(0).point;
+            Instantiate(explode);
 
-        if (DamageValue == 0) {
+            damageSystem();
+        }
+    }
+
+    void damageSystem() {
+        if (DamageValue == 0)
+        {
             Full.enabled = true;
             HalfLife.enabled = false;
             Dead.enabled = false;
         }
-        else if (DamageValue == 1) {
+        else if (DamageValue == 1)
+        {
             Full.enabled = false;
             HalfLife.enabled = true;
             Dead.enabled = false;
         }
-        else if (DamageValue == 2) {
+        else if (DamageValue == 2)
+        {
             Full.enabled = false;
             HalfLife.enabled = false;
             Dead.enabled = true;
         }
-        else if (DamageValue == 3) {
+        else if (DamageValue == 3)
+        {
             Destroy(gameObject);
             IsDead.Isdead = true;
         }
-
     }
 }
