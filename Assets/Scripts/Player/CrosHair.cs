@@ -3,6 +3,7 @@ using UnityEngine;
 public class CrosHair : MonoBehaviour
 {
     [SerializeField] private GameObject CrosshairGo;
+    [SerializeField] private GameObject Player;
     [SerializeField] private float distance;
     [SerializeField] private LayerMask layer;
     GameObject Go;
@@ -16,7 +17,7 @@ public class CrosHair : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.up, distance, layer);
+        RaycastHit2D hit = Physics2D.Raycast(Player.transform.position, Player.transform.up, distance, layer);
 
         if (hit.collider != null)
         {
@@ -30,6 +31,6 @@ public class CrosHair : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-       // Debug.DrawRay(transform.position, transform.up * distance, Color.red);
+       Debug.DrawRay(transform.position, transform.up * distance, Color.red);
     }
 }

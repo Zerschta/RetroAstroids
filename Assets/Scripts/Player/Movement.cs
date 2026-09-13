@@ -8,6 +8,8 @@ public class Movement : MonoBehaviour
     bool PressedA;
     bool PressedW;
 
+    [SerializeField] private GameObject Player;
+
     public float angle = 0;
     public float speed = 0;
     public float acceleration = 0;
@@ -19,7 +21,7 @@ public class Movement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {   
-        rb = GetComponent<Rigidbody2D>();
+        rb = Player.GetComponent<Rigidbody2D>();
     }
     void FixedUpdate()
     {
@@ -29,7 +31,7 @@ public class Movement : MonoBehaviour
             {
                 rb.linearVelocity = Vector2.MoveTowards(
                    rb.linearVelocity,
-                   transform.up * speed,
+                   Player.transform.up * speed,
                    acceleration * Time.fixedDeltaTime
                );
             }
@@ -66,7 +68,7 @@ public class Movement : MonoBehaviour
             {
                 angle -= rotspeed * Time.deltaTime;
             }
-            transform.rotation = Quaternion.Euler(0, 0, angle);
+            Player.transform.rotation = Quaternion.Euler(0, 0, angle);
         }
         else { 
             return ;

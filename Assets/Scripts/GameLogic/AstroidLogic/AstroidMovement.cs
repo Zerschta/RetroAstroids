@@ -90,7 +90,7 @@ public class AstroidMovement : MonoBehaviour
         CrackedAst.transform.position = right.transform.position;
         CrackedAst.transform.localScale = new Vector3(size, size, 0);
         CrackedAst.transform.rotation = UnityEngine.Quaternion.Euler(0, 0, Zless);
-        Instantiate(CrackedAst);
+        Instantiate(CrackedAst); 
     }
 
     private void FixedUpdate()

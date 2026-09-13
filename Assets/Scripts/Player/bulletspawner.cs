@@ -14,6 +14,10 @@ public class bulletspawner : MonoBehaviour
     }
     void Update()
     {
+
+        bullet.transform.position = bulletSpawn.transform.position;
+        bullet.transform.rotation = transform.rotation;
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("Shoot");
@@ -23,9 +27,6 @@ public class bulletspawner : MonoBehaviour
     }
     void SpawnBullet()
     {
-        bullet.transform.position = bulletSpawn.transform.position;
-        bullet.transform.rotation = transform.rotation;
-
         Instantiate(bullet);
     }
 }
