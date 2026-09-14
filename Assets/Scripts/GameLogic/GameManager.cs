@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
-        // Beim Start den gespeicherten High Score laden
         highScore = PlayerPrefs.GetInt("HighScore", 0); // 0 = Default, falls noch nichts gespeichert
     }
 
@@ -19,7 +18,7 @@ public class GameManager : MonoBehaviour
         {
             highScore = score;
             PlayerPrefs.SetInt("HighScore", highScore);
-            PlayerPrefs.Save(); // optional, Unity speichert eh regelm‰ﬂig automatisch
+            PlayerPrefs.Save();
         }
     }
 }
