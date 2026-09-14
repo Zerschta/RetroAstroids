@@ -1,11 +1,19 @@
 using System;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DamagePlayerSystem : MonoBehaviour
 {
-    public SpriteRenderer Full;
-    public SpriteRenderer HalfLife;
-    public SpriteRenderer Dead;
+    [SerializeField] private SpriteRenderer Full;
+    [SerializeField] private SpriteRenderer HalfLife;
+    [SerializeField] private SpriteRenderer Dead;
+
+    [SerializeField] private RawImage Right;
+    [SerializeField] private RawImage Mid;
+    [SerializeField] private RawImage Left;
+
+    
     public GameObject explode;
     public int DamageValue;
     void Start()
@@ -19,7 +27,7 @@ public class DamagePlayerSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -42,23 +50,30 @@ public class DamagePlayerSystem : MonoBehaviour
             Full.enabled = true;
             HalfLife.enabled = false;
             Dead.enabled = false;
+
+            Left.enabled = true;
+            Right.enabled = true;
+            Mid.enabled = true;
         }
         else if (DamageValue == 1)
         {
             Full.enabled = false;
             HalfLife.enabled = true;
             Dead.enabled = false;
+            Right.enabled = false;
         }
         else if (DamageValue == 2)
         {
             Full.enabled = false;
             HalfLife.enabled = false;
             Dead.enabled = true;
+            Mid.enabled = false;
         }
         else if (DamageValue == 3)
         {
             Destroy(gameObject);
             IsDead.Isdead = true;
+            Left.enabled = false;
         }
     }
 }

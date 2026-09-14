@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 
 
@@ -9,20 +10,23 @@ public class IsDead : MonoBehaviour
 
 public class GameLogic : MonoBehaviour
 {
-    
-    public GameObject Astroid;
-    public GameObject player;
-    public int counter = 9; // max 10
+    public GameManager gameManager;
+    [SerializeField ] private GameObject Astroid;
+    [SerializeField] private GameObject player;
+    [SerializeField] private TextMeshProUGUI score;
+ 
+    [SerializeField] private int counter = 9; // max 10
 
     private void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
         IsDead.Isdead = false;
     }
 
     void Update()
     {
         SpawnAstroid();
-        
+        score.text = "Score : " + gameManager.score;
     }
    
 
