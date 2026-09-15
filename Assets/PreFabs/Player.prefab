@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7527987149822437540}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerSprites
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2297732545872737114}
   - component: {fileID: 4675808931913817267}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Ship - Base - Full health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3327966986123051157, guid: 47987073242ece543adaef13b443b98e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -139,8 +139,8 @@ GameObject:
   - component: {fileID: 66921583030181828}
   - component: {fileID: 12301642779883905}
   - component: {fileID: 2756880513485537421}
-  m_Layer: 0
-  m_Name: Gun
+  m_Layer: 7
+  m_Name: BasicGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -155,7 +155,7 @@ Transform:
   m_GameObject: {fileID: 3200493663369104312}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.3, z: 0}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -216,7 +216,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.18, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -285,7 +285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5748830129214100879}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HalfLife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -318,7 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7892262761199320641}
   - component: {fileID: 3640619107929248168}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Ship - Base - Very damaged
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +387,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4938964468548632002, guid: 4361eb3063547f74a94fdb45eebcfeed, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -410,7 +410,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6993926596621516672}
   - component: {fileID: 4471946678475378793}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Ship - Base - Slight damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_MaskInteraction: 0
   m_Sprite: {fileID: -4059055360035529771, guid: fb1413122152458429b5ee94b423d9a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -517,7 +517,7 @@ Transform:
   m_GameObject: {fileID: 8151181763094125205}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.144, z: 0}
+  m_LocalPosition: {x: 0, y: 0.129, z: 0}
   m_LocalScale: {x: 0.33333334, y: 0.33333334, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -532,7 +532,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3011906174049308572}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Dead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -564,7 +564,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1847488443245005163}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FullLife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -730,10 +730,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movement
   Player: {fileID: 8745796338803729166}
   angle: 0
-  speed: 7
+  speed: 6
   acceleration: 8
-  slowdown: 3
-  rotspeed: 270
+  slowdown: 1
+  rotspeed: 200
 --- !u!1 &8745796338803729166
 GameObject:
   m_ObjectHideFlags: 0
@@ -744,12 +744,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4924279550734934252}
   - component: {fileID: 6296508599335419460}
-  - component: {fileID: 307231283105431709}
   - component: {fileID: 4598734997277426429}
-  - component: {fileID: 3857371144889843200}
-  - component: {fileID: 6315740379130957370}
+  - component: {fileID: 4201785154478480405}
   - component: {fileID: 4404907806515833404}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -801,14 +799,14 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &307231283105431709
+--- !u!58 &4598734997277426429
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8745796338803729166}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 0}
@@ -835,10 +833,10 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.4, y: -0.22}
-  m_Radius: 0.15
---- !u!58 &4598734997277426429
-CircleCollider2D:
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 0.4
+--- !u!70 &4201785154478480405
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -872,79 +870,8 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.3
---- !u!58 &3857371144889843200
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8745796338803729166}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0.4, y: -0.22}
-  m_Radius: 0.15
---- !u!58 &6315740379130957370
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8745796338803729166}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0.39}
-  m_Radius: 0.1
+  m_Size: {x: 0.6, y: 1}
+  m_Direction: 0
 --- !u!114 &4404907806515833404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -960,5 +887,8 @@ MonoBehaviour:
   Full: {fileID: 4675808931913817267}
   HalfLife: {fileID: 4471946678475378793}
   Dead: {fileID: 3640619107929248168}
+  Right: {fileID: 0}
+  Mid: {fileID: 0}
+  Left: {fileID: 0}
   explode: {fileID: 1515191032898844426, guid: ffaa22407f02a824688fc806d67d3016, type: 3}
   DamageValue: 0
