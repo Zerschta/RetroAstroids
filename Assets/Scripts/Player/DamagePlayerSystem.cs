@@ -12,7 +12,6 @@ public class DamagePlayerSystem : MonoBehaviour
     [SerializeField] private RawImage Right;
     [SerializeField] private RawImage Mid;
     [SerializeField] private RawImage Left;
-
     
     public GameObject explode;
     public int DamageValue;
@@ -27,7 +26,7 @@ public class DamagePlayerSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
