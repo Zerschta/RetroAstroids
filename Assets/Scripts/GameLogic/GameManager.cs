@@ -6,17 +6,20 @@ public class GameManager : MonoBehaviour
 
     public int highScore;
     [SerializeField] private bool ResetActive;
-
+    private bool StopSave;
     void Start()
     {
+        StopSave = false;
         highScore = PlayerPrefs.GetInt("HighScore", 0); // 0 = Default, falls noch nichts gespeichert
     }
 
     private void Update()
     {
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             ResetHighscore();
+            StopSave = true;
         }
     }
 
@@ -24,7 +27,7 @@ public class GameManager : MonoBehaviour
     {
         score += amount;
 
-        if (score > highScore)
+        if (score > highScore && StopSave == false)
         {
             highScore = score;
             PlayerPrefs.SetInt("HighScore", highScore);
