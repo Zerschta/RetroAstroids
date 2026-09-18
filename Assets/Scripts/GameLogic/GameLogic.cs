@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 
 public class IsDead : MonoBehaviour
@@ -13,7 +14,7 @@ public class GameLogic : MonoBehaviour
     public GameManager gameManager;
     [SerializeField ] private GameObject Astroid;
     [SerializeField] private GameObject player;
-    [SerializeField] private TextMeshProUGUI score;
+    [SerializeField] private TextMeshProUGUI[] scorelist;
  
     [SerializeField] private int counter = 9; // max 10
 
@@ -26,7 +27,9 @@ public class GameLogic : MonoBehaviour
     void Update()
     {
         SpawnAstroid();
-        score.text = "Score : " + gameManager.score;
+        foreach (TextMeshProUGUI score in scorelist) {
+            score.text = "Score : " + gameManager.score;
+        }
     }
    
 
