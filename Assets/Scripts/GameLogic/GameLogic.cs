@@ -2,6 +2,9 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 
 public class IsDead : MonoBehaviour
@@ -11,12 +14,19 @@ public class IsDead : MonoBehaviour
 
 public class GameLogic : MonoBehaviour
 {
+
     public GameManager gameManager;
     [SerializeField ] private GameObject Astroid;
     [SerializeField] private GameObject player;
     [SerializeField] private TextMeshProUGUI[] scorelist;
- 
+
+    [SerializeField] private GameObject Deathscreen;
+    [SerializeField] private GameObject PlayerGUI;
+    [SerializeField] private Button Restart;
+
+
     [SerializeField] private int counter = 9; // max 10
+
 
     private void Start()
     {
@@ -24,13 +34,29 @@ public class GameLogic : MonoBehaviour
         IsDead.Isdead = false;
     }
 
+    void ResetScene()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     void Update()
     {
+        if (IsDead.Isdead)
+        { 
+            Deathscreen.SetActive(true);
+            PlayerGUI.SetActive(false);
+            if (Restart.IsPressed())
+            {
+                ResetScene();
+            }
+        }
         SpawnAstroid();
         foreach (TextMeshProUGUI score in scorelist) {
             score.text = "Score : " + gameManager.score;
         }
     }
+    
+    
    
 
     Vector2 GetFreeSpawnPosition(float checkRadius, int maxAttempts)
