@@ -2989,6 +2989,9 @@ MonoBehaviour:
   scorelist:
   - {fileID: 1427607994}
   - {fileID: 2095134748}
+  Deathscreen: {fileID: 1312154830}
+  PlayerGUI: {fileID: 43097192}
+  Restart: {fileID: 742060064}
   counter: 4
 --- !u!224 &1628822158
 RectTransform:
