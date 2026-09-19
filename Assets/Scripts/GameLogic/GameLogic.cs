@@ -30,6 +30,8 @@ public class GameLogic : MonoBehaviour
 
     private void Start()
     {
+        Deathscreen.SetActive(false);
+        PlayerGUI.SetActive(true);
         gameManager = FindAnyObjectByType<GameManager>();
         IsDead.Isdead = false;
     }
