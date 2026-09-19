@@ -8,11 +8,9 @@ public class AstSpinning : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        RotSpeed = UnityEngine.Random.Range(0.01f, 0.1f);
-        
+        RotSpeed = UnityEngine.Random.Range(0.01f, 0.1f);       
     }
 
-    // Update is called once per frame
     void Update()
     {
         StartValue += RotSpeed;

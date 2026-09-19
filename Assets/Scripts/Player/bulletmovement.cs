@@ -28,9 +28,9 @@ public class bulletmovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     { 
-            explode.transform.position = collision.GetContact(0).point;
-            Instantiate(explode);
-            Destroy(gameObject);
+        explode.transform.position = collision.GetContact(0).point;
+        Instantiate(explode);
+        Destroy(gameObject);
 
         if (collision.collider.CompareTag("Astroid") || collision.collider.CompareTag("CrackedAstroid"))
         {

@@ -12,14 +12,7 @@ public class CAstroidMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        //RanSpeed = UnityEngine.Random.Range(0.05f, 0.07f);
         RanSpeed = 0.04f;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -40,7 +33,6 @@ public class CAstroidMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         transform.position += transform.up * RanSpeed;
         CheckCorner();
     }

@@ -35,12 +35,6 @@ public class AstroidMovement : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.CompareTag("Bullet"))

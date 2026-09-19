@@ -25,10 +25,4 @@ public class SelectType : MonoBehaviour
             RendererC.enabled = true;
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

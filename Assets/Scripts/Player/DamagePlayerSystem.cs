@@ -23,12 +23,6 @@ public class DamagePlayerSystem : MonoBehaviour
         Dead.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-      
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.collider.gameObject.CompareTag("Astroid") || collision.collider.gameObject.CompareTag("CrackedAstroid"))

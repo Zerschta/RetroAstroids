@@ -6,8 +6,6 @@ public class bulletspawner : MonoBehaviour
     public GameObject bulletSpawn;
     Animator animator;
 
-    // Update is called once per frame
-
     private void Start()
     {
         animator = GetComponent<Animator>();
@@ -21,9 +19,7 @@ public class bulletspawner : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             animator.SetTrigger("Shoot");
-        }
-        
-        
+        }   
     }
     void SpawnBullet()
     {

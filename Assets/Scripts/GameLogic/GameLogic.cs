@@ -14,7 +14,6 @@ public class IsDead : MonoBehaviour
 
 public class GameLogic : MonoBehaviour
 {
-
     public GameManager gameManager;
     [SerializeField ] private GameObject Astroid;
     [SerializeField] private GameObject player;
@@ -24,9 +23,7 @@ public class GameLogic : MonoBehaviour
     [SerializeField] private GameObject PlayerGUI;
     [SerializeField] private Button Restart;
 
-
     [SerializeField] private int counter = 9; // max 10
-
 
     private void Start()
     {
@@ -58,9 +55,6 @@ public class GameLogic : MonoBehaviour
         }
     }
     
-    
-   
-
     Vector2 GetFreeSpawnPosition(float checkRadius, int maxAttempts)
     {
         for (int i = 0; i < maxAttempts; i++)
