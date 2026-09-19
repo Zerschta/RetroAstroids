@@ -3,10 +3,11 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public int score;
-
     public int highScore;
     [SerializeField] private bool ResetActive;
+
     private bool StopSave;
+
     void Start()
     {
         StopSave = false;
