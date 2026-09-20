@@ -239,7 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   size: 0
-  RanSpeed: 1.02
+  RanSpeed: 1
   RandomRotation: 29
   left: {fileID: 3894520269544773000}
   right: {fileID: 6730251813352668509}

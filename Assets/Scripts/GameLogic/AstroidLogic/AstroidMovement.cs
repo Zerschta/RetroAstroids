@@ -8,7 +8,6 @@ public class AstroidMovement : MonoBehaviour
 {
     public float size;
     public float RanSpeed;
-    public int RandomRotation;
     public GameObject left;
     public GameObject right;
     public GameObject explode;
@@ -20,7 +19,7 @@ public class AstroidMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        RanSpeed = UnityEngine.Random.Range(0.03f, 0.05f);
+        RanSpeed = UnityEngine.Random.Range(0.04f, 0.06f);
         size = UnityEngine.Random.Range(1.2f , 1.8f);
         transform.localScale = new Vector3(size, size, 0);
     }
@@ -46,6 +45,7 @@ public class AstroidMovement : MonoBehaviour
         {
             Destroy(gameObject);
             Destroy(collision.collider.gameObject);
+
             if (gameObject.GetEntityId() < collision.gameObject.GetEntityId()) {
 
                 explode.transform.localScale = new Vector3(size * 4, size * 4, 0);
@@ -88,8 +88,7 @@ public class AstroidMovement : MonoBehaviour
     }
 
     private void FixedUpdate()
-    {
-        
+    {        
         transform.position += transform.up * RanSpeed;
         CheckCorner();
     }

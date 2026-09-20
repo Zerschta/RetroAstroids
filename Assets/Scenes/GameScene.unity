@@ -3135,7 +3135,8 @@ MonoBehaviour:
   Deathscreen: {fileID: 1312154830}
   PlayerGUI: {fileID: 43097192}
   Restart: {fileID: 742060064}
-  counter: 4
+  backtomenu: {fileID: 416671651}
+  counter: 5
 --- !u!224 &1628822158
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3775,6 +3776,10 @@ PrefabInstance:
       propertyPath: Right
       value: 
       objectReference: {fileID: 1187590340}
+    - target: {fileID: 4404907806515833404, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
+      propertyPath: DamageValue
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4924279550734934252, guid: 0974fbf8863ff3d4b9bfa3f44a59d8bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

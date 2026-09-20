@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEditor;
 
 
 
@@ -22,6 +23,7 @@ public class GameLogic : MonoBehaviour
     [SerializeField] private GameObject Deathscreen;
     [SerializeField] private GameObject PlayerGUI;
     [SerializeField] private Button Restart;
+    [SerializeField] private Button backtomenu;
 
     [SerializeField] private int counter = 9; // max 10
 
@@ -47,6 +49,10 @@ public class GameLogic : MonoBehaviour
             if (Restart.IsPressed())
             {
                 ResetScene();
+            }
+            else if (backtomenu.IsPressed())
+            {
+                SceneManager.LoadScene("MainMenu");
             }
         }
         SpawnAstroid();
@@ -110,7 +116,7 @@ public class GameLogic : MonoBehaviour
 
                 Vector2 direction = (Vector2)player.transform.position - spawnPos;
 
-                int random = UnityEngine.Random.Range(40, 140);
+                int random = UnityEngine.Random.Range(80, 100); //+90 
 
                 float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
