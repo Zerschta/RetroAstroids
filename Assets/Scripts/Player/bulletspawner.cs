@@ -18,10 +18,9 @@ public class bulletspawner : MonoBehaviour
         bullet.transform.position = bulletSpawn.transform.position;
         bullet.transform.rotation = transform.rotation;
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse1))
         {
             animator.SetTrigger("Shoot");
-            play();
         }
     }
     void SpawnBullet()
