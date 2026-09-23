@@ -44,10 +44,10 @@ public class Movement : MonoBehaviour
                 );
             }
         }
-        else { 
+        else
+        {
             return;
         }
-        
     }
 
     // Update is called once per frame
@@ -68,7 +68,8 @@ public class Movement : MonoBehaviour
             {
                 angle -= rotspeed * Time.deltaTime;
             }
-            Player.transform.rotation = Quaternion.Euler(0, 0, angle);
+                Player.transform.rotation = Quaternion.Euler(0, 0, angle);
+            
         }
         else { 
             return ;
@@ -85,8 +86,5 @@ public class Movement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.W)) PressedW = true;
         if (Input.GetKeyUp(KeyCode.W)) PressedW = false;
     }
-
-    
-
 }
 

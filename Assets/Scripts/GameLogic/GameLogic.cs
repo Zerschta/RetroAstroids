@@ -50,12 +50,9 @@ public class GameLogic : MonoBehaviour
             {
                 ResetScene();
             }
-            else if (backtomenu.IsPressed())
-            {
-                SceneManager.LoadScene("MainMenu");
-            }
         }
-        SpawnAstroid();
+
+            SpawnAstroid();
         foreach (TextMeshProUGUI score in scorelist) {
             score.text = "Score : " + gameManager.score;
         }
@@ -101,7 +98,6 @@ public class GameLogic : MonoBehaviour
         
         return (Fin);
     }
-
     void SpawnAstroid()
     {
         int value = GameObject.FindGameObjectsWithTag("Astroid").Length;
