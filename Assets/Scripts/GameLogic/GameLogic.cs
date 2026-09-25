@@ -50,6 +50,10 @@ public class GameLogic : MonoBehaviour
             {
                 ResetScene();
             }
+            else if (backtomenu.IsPressed())
+            {
+                SceneManager.LoadScene("MainMenu");
+            }
         }
 
             SpawnAstroid();
