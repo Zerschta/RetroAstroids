@@ -10,7 +10,7 @@ Das Projekt wurde mit **Unity und C#** entwickelt und dient gleichzeitig dazu, p
 | --------- | ---------------------- |
 | **W**     | Vorwärts beschleunigen |
 | **A / D** | Raumschiff drehen      |
-| **Space** | Schießen               |
+| **Space /LeftMouse** | Schießen               |
 
 ## Projektstruktur
 e
