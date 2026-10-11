@@ -1566,9 +1566,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SettingsMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 1785353545431040773, guid: b4d0fea2e79af2949914183298112d1d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3399036784811153073, guid: b4d0fea2e79af2949914183298112d1d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4049428405258315983, guid: b4d0fea2e79af2949914183298112d1d, type: 3}
       propertyPath: m_Pivot.x
@@ -1652,7 +1656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7958825861296008271, guid: b4d0fea2e79af2949914183298112d1d, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
